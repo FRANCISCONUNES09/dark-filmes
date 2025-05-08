@@ -17,6 +17,11 @@ export default function Cadastrar(){
     async function handleSubmit(event){
         event.preventDefault();
 
+        if(!titulo || !diretor || !ano || !genero || !nota || !sinopse || !banner){
+            toast.error("Preencha todos os campos!")
+            return;
+        }
+
         try {
             await instance.post("/api/movies", {
                 titulo: titulo,
@@ -45,7 +50,7 @@ export default function Cadastrar(){
     return (
        <PageWrapper showButton={false}>
             <div className="w-full h-full py-[40px] px-[70px] flex flex-col">
-                <h1 className="text-[30px] font-bold text-[#9A86F4]">Adicione um novo filme</h1>
+                <h1 className="text-[30px] font-bold text-[#9245EBFF]">Adicione um novo filme</h1>
                 <p className="text-[20px] text-gray-500">
                     Preencha o formulário abaixo para adicionar um novo filme à na sua coleção</p>
                 <div className="w-full flex justify-center pt-[40px]">
