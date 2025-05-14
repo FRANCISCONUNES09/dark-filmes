@@ -42,8 +42,8 @@ export default function Filme(){
                         <div className="w-full h-[90%]">
                             <img 
                                 className="w-full h-full roudend-lg object-cover"
-                                src="https://upload.wikimedia.org/wikipedia/pt/c/c5/Fast_five_poster_04.jpg" 
-                                alt="" 
+                                src={filme.banner}
+                                alt={filme.titulo} 
                             />
                         </div>
                         <div className="w-full flex h-[10%] pt-4 justify-between">
@@ -61,24 +61,24 @@ export default function Filme(){
                     </div>
                     <div className="w-[70%] pl-4 h-full flex flex-col">
                         <div className="w-full flex gap-2 items-baseline">
-                            <h1 className="text-[35px] text-[#9245EBFF] font-bold">Velozes & Furiosos 5</h1>
-                            <p className="text-[#8a898c] font-semibold text-[17px]">(2011)</p>
+                            <h1 className="text-[35px] text-[#9245EBFF] font-bold">{filme.titulo}</h1>
+                            <p className="text-[#8a898c] font-semibold text-[17px]">({filme.ano})</p>
                         </div>
                         <div className="w-full gap-4 flex">
                             <div className="py-1 px-4 rounded-2xl bg-[#4ade80]/20 text-[#4ade80]">
-                                <p className="text-[17px]">10/10</p>
+                                <p className="text-[17px]">{filme.nota}/10</p>
                             </div>
                             <div className="py-1 px-4 rounded-2xl bg-[#9245EBFF]/20 text-[#9245EBFF]">
-                                <p className="text-[17px]">Ação</p>
+                                <p className="text-[17px]">{filme.genero}</p>
                             </div>
                         </div>
                         <div className="w-full flex flex-col mt-8">
                             <h4 className="font-bold text-[20px]">Diretor</h4>
-                            <p className="text-[#8a898c]">Justin Lin</p>
+                            <p className="text-[#8a898c]">{filme.diretor}</p>
                         </div>
                          <div className="w-full flex flex-col mt-8">
                             <h4 className="font-bold text-[20px]">Sinopse</h4>
-                            <p className="text-[#8a898c]">Desde que o ex-policial Brian O'Conner e Mia Toretto libertaram Dom da prisão, eles viajam pelo mundo para fugir das autoridades. No Rio de Janeiro, são obrigados a fazer um último trabalho antes de ganhar sua liberdade definitiva. Brian e Dom montam uma equipe de elite de pilotos de carro para executar a tarefa, mas precisam enfrentar um empresário corrupto e também um obstinado agente federal norte-americano.</p>
+                            <p className="text-[#8a898c]">{filme.sinopse}</p>
                         </div>
                     </div>
                 </div>
